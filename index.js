@@ -11,19 +11,18 @@ const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://queue-management-system-2-0-t3kg-3rcrv4fph.vercel.app",  // Specify your frontend URL here
+    origin: "https://queue-management-system-2-0.vercel.app",  // Updated to correct frontend URL
     methods: ["GET", "POST"]
   }
 });
 
-
-
 // Middleware
 app.use(cors({
-  origin: 'https://queue-management-system-2-0-t3kg-3rcrv4fph.vercel.app', // Allow requests from your frontend
+  origin: 'https://queue-management-system-2-0.vercel.app', // Allow requests from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true, // If cookies or credentials are used
 }));
+
 
 app.use(express.json());
 

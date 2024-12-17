@@ -20,7 +20,7 @@ const io = require("socket.io")(server, {
 
 // Middleware
 app.use(cors({
-  origin: 'https://queue-management-system-2-0-t3kg.vercel.app', // Allow requests from your frontend
+  origin: 'https://queue-management-system-2-0-t3kg-4nhfgveh0.vercel.app', // Allow requests from your frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
   credentials: true, // If cookies or credentials are used
 }));

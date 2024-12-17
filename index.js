@@ -9,13 +9,13 @@ require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
+const io = require("socket.io")(server, {
   cors: {
-    origin: 'https://queue-management-system-2-0-t3kg.vercel.app',
-    methods: ['GET', 'POST'],
-    credentials: true,
-  },
+    origin: "https://queue-management-system-2-0-t3kg-4nhfgveh0.vercel.app",  // Specify your frontend URL here
+    methods: ["GET", "POST"]
+  }
 });
+
 
 
 // Middleware

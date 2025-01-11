@@ -35,7 +35,12 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + '-' + file.originalname); // Add timestamp to filename to avoid conflicts
   },
 });
-const upload = multer({ storage });
+// Multer setup for file uploads
+const upload = multer({
+  storage,
+  limits: { fileSize: 10 * 1024 * 1024 }, // Set file size limit to 10MB
+});
+
 
 
 // MongoDB connection
